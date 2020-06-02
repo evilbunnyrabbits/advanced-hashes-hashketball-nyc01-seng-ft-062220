@@ -181,7 +181,9 @@ end
 def player_numbers(team_name)
   game_hash.each do |keys, values|
     if values[:team_name] == team_name
-      return values[:players].map {|player| player[:number]}
+      results = values[:players].map {|item| item[:number]}
+      results = results.sort
+      return results
     end
   end
 end
