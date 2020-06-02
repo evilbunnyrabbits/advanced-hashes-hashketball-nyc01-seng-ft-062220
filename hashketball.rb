@@ -181,11 +181,15 @@ end
 def player_numbers(team_name)
   jersey_numbers = []
   game_hash.each do |key, value|
-    value[:players].each do |obejcts|
-      number = obejcts[:number]
-      jersey_numbers.push(number)
+    name = value[:team_name]
+    if name == team_name
+      value[:players].each do |obejcts|
+        number = obejcts[:number]
+        jersey_numbers.push(number)
       end
     end
+    jersey_numbers = jersey_numbers.sort
   return jersey_numbers
+  end
 end
 
