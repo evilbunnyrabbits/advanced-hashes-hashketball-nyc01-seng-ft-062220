@@ -169,5 +169,12 @@ def team_colors(team)
   return "team not found"
 end
 
-
+def team_names()
+  names = []
+  game_hash.each do |key, value|
+    name = value[:team_name]
+    names.push(name)
+  end
+  return names
+end
 
