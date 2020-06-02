@@ -158,7 +158,6 @@ def shoe_size(player_name)
 end
 
 def team_colors(team)
-  team_colors = []
   game_hash.each do |key, value|
     value.each do |inner_key, inner_value|
       if inner_value == team
@@ -167,6 +166,6 @@ def team_colors(team)
       end
     end
     end
-  return "array not found"
+  return "team not found"
 end
 
