@@ -178,3 +178,14 @@ def team_names()
   return names
 end
 
+def player_numbers(team_name)
+  jersey_numbers = []
+  game_hash.each do |key, value|
+    value[:players].each do |obejcts|
+      number = obejcts[:number]
+      jersey_numbers.push(number)
+      end
+    end
+  return jersey_numbers
+end
+
