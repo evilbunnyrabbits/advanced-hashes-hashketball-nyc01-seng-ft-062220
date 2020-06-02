@@ -129,4 +129,16 @@ end
 puts game_hash[:home][:team_name]
 
 
-# Write code here
+def num_points_scored(player_name)
+  points_scored = 0
+  game_hash.each do |key, value|
+    value[:players].each do |obejcts|
+      name = obejcts[:player_name]
+      points = obejcts[:points]
+            if name == player_name
+        points_scored += points
+      end
+    end
+  end
+  return points_scored
+end
