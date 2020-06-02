@@ -163,10 +163,10 @@ def team_colors(team)
     value.each do |inner_key, inner_value|
       if inner_value == team
         colors = value[:colors]
-        team_colors.push(colors)
+        return colors
       end
     end
     end
-  return team_colors
+  return "array not found"
 end
 
