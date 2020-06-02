@@ -126,4 +126,7 @@ def game_hash
   }
 end
 
+puts game_hash[:home][:team_name]
+
+
 # Write code here
