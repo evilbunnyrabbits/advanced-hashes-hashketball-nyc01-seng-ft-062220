@@ -179,17 +179,10 @@ def team_names()
 end
 
 def player_numbers(team_name)
-  jersey_numbers = []
-  game_hash.each do |key, value|
-    name = value[:team_name]
-    if name == team_name
-      value[:players].each do |obejcts|
-        number = obejcts[:number]
-        jersey_numbers.push(number)
-      end
+  game_hash.each do |keys, values|
+    if values[:team_name] == team_name
+      return values[:players].map {|player| player[:number]}
     end
-    jersey_numbers = jersey_numbers.sort
-  return jersey_numbers
   end
 end
 
